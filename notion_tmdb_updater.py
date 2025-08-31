@@ -31,11 +31,11 @@ def build_filter() -> dict:
   ]
 
   # Empty properties
-  for prop_name, empty_type in settings.empty_map.items():
-    clauses.append({
-      "property": prop_name,
-      empty_type: {"is_empty": True}
-    })
+  # for prop_name, empty_type in settings.empty_map.items():
+  #   clauses.append({
+  #     "property": prop_name,
+  #     empty_type: {"is_empty": True}
+  #   })
   return {"and": clauses}
 
 
@@ -148,7 +148,7 @@ def process_page(page: dict):
 if __name__ == "__main__":
   pages = fetch_pages_missing_field()
   logging.info("Found %d pages to update", len(pages))
-
+  print(pages)
   # Parallelize the I/O-bound work
   with ThreadPoolExecutor(max_workers=10) as pool:
     pool.map(process_page, pages)

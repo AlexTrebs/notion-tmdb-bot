@@ -81,9 +81,8 @@ Example .env
 TMDB_TOKEN=eyJxxxYOUR_TMDB_TOKENxxx
 NOTION_TOKEN=secret_xxxYOUR_NOTION_TOKENxxx
 NOTION_DB=25ee7153-f4b9-80b2-9dfd-cea91237d4b1
-NOTION_DB_TITLE=Movie / Series
-TMDB_IMAGE_BASE=https://image.tmdb.org/t/p/w500
-NOTION_EMPTY_PROPERTY_MAP='{"Poster":"rich_text","Genre":"multi_select","Director":"rich_text","Studio / Distributor":"multi_select","Type":"select"}'
+NOTION_DB_TITLE="Movie / Series"
+NOTION_EMPTY_PROPERTY_MAP={"Poster":"rich_text","Genre":"multi_select","Director":"rich_text","Studio / Distributor":"multi_select","Type":"select"}
 ```
 
 ## Usage

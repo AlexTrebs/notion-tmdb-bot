@@ -11,12 +11,7 @@ def get_directors(crew: list[dict]) -> list[str]:
 
 PROP_HANDLERS: dict[str, DefHandler] = {
   "Poster": lambda info: {
-    "rich_text": [
-      {
-        "type": "text",
-        "text": {"content": settings.img_base + info.get("poster_path", "")},
-      }
-    ]
+    "url":settings.img_base + info.get("poster_path", ""),
   },
   "Genre": lambda info: {
     "multi_select": [{"name": g["name"]} for g in info.get("genres", [])]
